@@ -46,8 +46,6 @@ streamlit run streamUI.py
 ## 📁 ディレクトリ構成
 
 ```
-bash
-コピーする編集する
 プロジェクト/
 ├── streamUI.py       # Streamlitアプリ本体
 ├── config.py         # APIキーなどの設定ファイル
