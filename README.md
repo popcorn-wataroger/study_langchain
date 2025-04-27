@@ -3,6 +3,7 @@
 以下の機能を備えたAIアシスタントを提供します：
 - 通常の会話（ChatGPTベース）
 - インターネット検索（SerpAPIを使用）
+- エージェント機能をLangGraphベースで拡張
 - 社内資料（PDF等）に基づく検索（※オプション）
 
 ---
@@ -37,7 +38,7 @@ SERP_API_KEY = "あなたのSerpAPIキー"
 4. Streamlitアプリを起動します。
 
 ```bash
-streamlit run streamUI.py
+streamlit run stream_UI.py
 
 ```
 
@@ -47,7 +48,7 @@ streamlit run streamUI.py
 
 ```
 プロジェクト/
-├── streamUI.py       # Streamlitアプリ本体
+├── streamUI.py       # Streamlitアプリ本体（単体動作）
 ├── config.py         # APIキーなどの設定ファイル
 ├── Agent/
 │   └── AI_agent.py    # 外部検索エージェントロジック
@@ -64,6 +65,7 @@ streamlit run streamUI.py
 
 - **Streamlit** — チャットUI
 - **LangChain** — チェーン構築とモデル管理
+- **LangGraph** — マルチエージェント構成・柔軟なフロー制御
 - **OpenAI API** — LLM（gpt-4o-mini）ベース応答
 - **SerpAPI** — インターネット検索
 - **Chroma（オプション）** — ドキュメント検索データベース
